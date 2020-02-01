@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+.menu{ z-index:1000; position:relative; float:left;}
+
+h1, h2, h3, h4, h5, h6, span, p, a{font-family: 'Open Sans', sans-serif;}
+
+
+.toggleMenu {
+    display:  none;
+    padding: 10px; width:100%;
+    color: #fff; 
+}
+.nav {
+	margin:0px;
+    list-style: none;
+     *zoom: 1;
+	 float:left;
+     position:relative; padding:0px;
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none; margin:0px; padding:0px;
+}
+.nav a {
+    color:#3a618a;
+}
+.nav li {
+    position: relative; z-index:2; float: left; padding:0px; border-right:1px solid #68b4f2; padding:0 31px; text-transform:uppercase;
+}
+.nav li:last-child{ margin-right:0px;}
+
+.nav li a{display:block; font-size:14px;  color:#fff; text-decoration:none; padding:0px 2px; padding-top:25px; padding-bottom:18px; transition:all ease-in-out .1s; font-weight:600}
+
+.nav > li:hover, .nav > li li:hover > a, .nav > a:hover, .nav li.select
+ { background:#f37606;}
+.nav li.select a, .nav li a:hover {color:#fff;}
+.nav > li > .parent {
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nav li  ul {
+    position: absolute;
+    left: -9999px; 
+}
+.nav > li.hover > ul {
+    left:0px; width:250px;
+
+}
+.nav li li.hover ul {
+    left: 100%; 
+	top: 0;
+	}
+.nav li li {width:100%; float:none; display:block; padding: 0}
+.nav li li a {
+    display: block;
+    color:#fff;background:#484848 url(../images/nav-bg.png) right 2px bottom 2px no-repeat;
+    position: relative; padding:8px 10px !important;
+    z-index:100; text-transform:none !important; font-family:ABeeZee;
+    font-size:14px; border-radius:0px !important; border-right:none !important;  border-bottom:1px solid rgba(255, 255, 255, 0.1);
+
+ 	
+}
+.nav li li ul{width:300px;}
+.nav li li li a {
+    background:#056d9d; display:block;
+    z-index:200; color:#fff;
+    
+}
+
+
+.nav li li a:hover {
+    z-index:200; display:block;
+    
+}
+
+.bar-outer{float:right; margin-top:2px;}
+.bar1,.bar2,.bar3{width:19px;height:2px;background-color:#fff;margin:3px 0;transition:.4s}
+.change .bar1{-webkit-transform:rotate(-45deg) translate(-5px,4px);transform:rotate(-45deg) translate(-5px,1px)}
+.change .bar2{opacity:0}
+.change .bar3{-webkit-transform:rotate(45deg) translate(-5px,-6px);transform:rotate(45deg) translate(-6px,-2px);}
+
+@media screen and (max-width: 1280px) {
+    .menu{ padding-left:0px; width:100%;}
+	.nav li{ margin-right:1px;}
+	.nav li a{ padding:24px 12px;}
+}
+@media screen and (max-width: 1200px) {
+	.text h3{ padding-left:6px; padding-right:6px; padding-bottom:0px;}
+	}
+
+@media screen and (max-width: 1140px) {
+	
+	.menu{ width:100%; float:left;}
+    .nav li a { padding: 20px 9px;}
+}
+@media screen and (max-width: 1024px) {
+	.menu{ width:100%; float:left;}
+    .nav li a { padding: 17px 4px;}
+}
+@media screen and (max-width: 1014px) {
+	.nav li a{ padding:17px 4px;}
+}
+@media screen and (max-width: 1000px) {
+    
+.toggleMenu {padding:10px 15px; font-family:ABeeZee; font-size:14px;
+    color:#fff !important; text-decoration:none; text-transform: uppercase; /*border-right:solid 1px #353535;*/
+	 text-decoration:none; background:#3b9eee; width:100%; float:right;}
+
+.active {  display: block; }
+
+.nav > li > .parent { background-position: 95% 50%;  }
+.nav ul {
+        display:inline-block;
+        width:100%;  
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static; 
+    }
+	.nav li li ul{width:auto;}
+	
+	
+	
+	.nav > li.hover > ul {
+    left:-1px; width:100%;
+}
+
+.menu-bg { float:none;}
+
+.nav li { margin-right: 0px; width:100%; border-bottom:2px solid rgba(0, 0 ,0, 0.00)}
+.nav li a{padding:10px; font-size:16px; border-radius:0px;}
+
+}
+@media screen and (max-width: 992px) {
+	.nav{background:#0f86e5}
+	.menu-outer{ background:#fff;}
+	.menu{ width:100%; margin-bottom:5px; padding-left:15px;}
+	.nav li{ border-bottom:1px solid #dee0e236; padding: 0 58px 0 10px;}
+}
+
+@media screen and (max-width: 768px) {
+	.menu{ margin-top:0px;}
+	}
+	
+@media only screen and ( max-width: 640px)	{
+	.menu{ width:100%; text-align:left; margin-top:0px; margin-bottom:5px;} 
+	.nav li a{ font-size:14px; font-weight:normal;}
+	}	
+@media only screen and ( max-width: 480px)	{
+	.menu{ width:100%;} 
+	
+}
